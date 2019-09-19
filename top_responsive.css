@@ -1,0 +1,512 @@
+@charset "UTF-8";
+/* CSS Document */
+@media screen and (max-width:640px) {
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: YuGothic, 'Yu Gothic', sans-serif;
+    cursor: none;
+  }
+  html, body {
+    height: 100%;
+    /*↑100%にすること*/
+    width: auto;
+  }
+  body {
+    position: relative;
+  }
+  ul {
+    list-style: none;
+  }
+  .navbar {
+    position: fixed;
+    width: 640px;
+    background-color: rgba(91, 91, 91, 0.70);
+    z-index: 2;
+  }
+  nav ul {
+    width: 500px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .top {
+    padding-bottom: 300px;
+    text-align: center;
+  }
+  .point1, .point2, .point3, .point4 {
+    display: none;
+  }
+  .topBtn {
+    position: fixed;
+    text-align: center;
+    width: 60px;
+    top: 670px;
+    left: 45%;
+    z-index: 10;
+  }
+  .works-wrap {
+    position: relative;
+    width: 550px;
+  }
+  .imgBox {
+    width: 500px;
+    margin: 0 auto;
+  }
+  p {
+    margin: 0 auto;
+  }
+  /*web-wrapper*/
+  .hidden_boxW {
+    height: 350px;
+    padding-top: 30px;
+  }
+  .hidden_boxW input {
+    width: 400px;
+    display: none;
+  }
+  .imgBox img {
+    width: 450px;
+    height: auto;
+  }
+  /*web1*/
+  .hidden_boxW .hidden_show1 {
+    margin-top: -30px;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+  }
+  .hidden_boxW #label1:checked ~ .hidden_show1 {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
+  }
+  .webWorks {
+    display: flex;
+    justify-content: space-between;
+  }
+  .circle1 {
+    position: relative;
+    display: flex;
+    float: left;
+    margin-left: auto;
+    text-align: center;
+    width: 140px;
+    height: 140px;
+    border: solid 5px #ffdc38;
+    border-radius: 50%;
+    animation: move1 7s linear infinite;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .ochuchi {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background: url("../img/ochuchi.png");
+    background-size: cover;
+    background-position: 35% center;
+    transition-duration: 0.3s;
+  }
+  label .ochuchi:hover {
+    transform: scale(1.3);
+    transition: 0.5s;
+  }
+  /*web2*/
+  .hidden_boxW .hidden_show2 {
+    margin-top: -30px;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+  }
+  .hidden_boxW #label2:checked ~ .hidden_show2 {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
+  }
+  .circle2 {
+    position: relative;
+    display: flex;
+    float: left;
+    margin-left: auto;
+    text-align: center;
+    width: 140px;
+    height: 140px;
+    border: solid 5px #ffdc38;
+    border-radius: 50%;
+    animation: move2 7s linear infinite;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .shiro {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background: url("../img/shiro.png");
+    background-size: cover;
+    background-position: 35% center;
+    transition-duration: 0.3s;
+  }
+  label .shiro:hover {
+    transform: scale(1.3);
+    transition: 0.5s;
+  }
+  /*web3*/
+  .hidden_boxW .hidden_show3 {
+    margin-top: -30px;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+  }
+  .hidden_boxW #label3:checked ~ .hidden_show3 {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
+  }
+  .circle3 {
+    position: relative;
+    display: flex;
+    float: left;
+    margin-left: auto;
+    text-align: center;
+    width: 140px;
+    height: 140px;
+    border: solid 5px #ffdc38;
+    border-radius: 50%;
+    animation: move3 7s linear infinite;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .port {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background: url("../img/softop.png");
+    background-size: cover;
+    background-position: 35% center;
+    transition-duration: 0.3s;
+  }
+  label .port:hover {
+    transform: scale(1.3);
+    transition: 0.5s;
+  }
+  /*gra-wrapper*/
+  .hidden_boxG {
+    height: 350px;
+    padding-top: 30px;
+  }
+  .hidden_boxG input {
+    width: 400px;
+    display: none;
+  }
+  /*gra1*/
+  .hidden_boxG .hidden_show4 {
+    margin-top: -30px;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+  }
+  .hidden_boxG #label4:checked ~ .hidden_show4 {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
+  }
+  .graWorks {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .circle4 {
+    position: relative;
+    display: flex;
+    float: left;
+    margin-left: auto;
+    text-align: center;
+    width: 140px;
+    height: 140px;
+    border: solid 5px #ffdc38;
+    border-radius: 50%;
+    animation: move1 7s linear infinite;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .mud {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background: url("../img/mud.png");
+    background-size: cover;
+    background-position: 35% center;
+    transition-duration: 0.3s;
+  }
+  label .mud:hover {
+    transform: scale(1.3);
+    transition: 0.5s;
+  }
+  /*gra2*/
+  .hidden_boxG .hidden_show5 {
+    margin-top: -40px;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+  }
+  .hidden_boxG #label5:checked ~ .hidden_show5 {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
+  }
+  .circle5 {
+    position: relative;
+    display: flex;
+    float: left;
+    margin-left: auto;
+    text-align: center;
+    width: 140px;
+    height: 140px;
+    border: solid 5px #ffdc38;
+    border-radius: 50%;
+    animation: move2 7s linear infinite;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .typo {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background: url("../img/typo.png");
+    background-size: cover;
+    background-position: 35% center;
+    transition-duration: 0.3s;
+  }
+  label .typo:hover {
+    transform: scale(1.3);
+    transition: 0.5s;
+  }
+  /*spa-wrapper*/
+  .hidden_boxS {
+    height: 350px;
+    padding-top: 30px;
+  }
+  .hidden_boxS input {
+    width: 400px;
+    display: none;
+  }
+  /*spa1*/
+  .hidden_boxS .hidden_show6 {
+    margin-top: -30px;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+  }
+  .hidden_boxS #label6:checked ~ .hidden_show6 {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
+  }
+  .spaWorks {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .circle6 {
+    position: relative;
+    display: flex;
+    float: left;
+    margin-left: auto;
+    text-align: center;
+    width: 140px;
+    height: 140px;
+    border: solid 5px #ffdc38;
+    border-radius: 50%;
+    animation: move2 7s linear infinite;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .egg {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background: url("../img/egg.png");
+    background-size: cover;
+    background-position: 35% center;
+    transition-duration: 0.3s;
+  }
+  label .egg:hover {
+    transform: scale(1.3);
+    transition: 0.5s;
+  }
+  /*spa2*/
+  .hidden_boxS .hidden_show7 {
+    margin-top: -50px;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+  }
+  .hidden_boxS #label7:checked ~ .hidden_show7 {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
+  }
+  .circle7 {
+    position: relative;
+    display: flex;
+    float: left;
+    margin-left: auto;
+    text-align: center;
+    width: 140px;
+    height: 140px;
+    border: solid 5px #ffdc38;
+    border-radius: 50%;
+    animation: move3 7s linear infinite;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .candy {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background: url("../img/candy.png");
+    background-size: cover;
+    background-position: 35% center;
+    transition-duration: 0.3s;
+  }
+  label .candy:hover {
+    transform: scale(1.3);
+    transition: 0.5s;
+  }
+  /*oth-wrapper*/
+  .hidden_boxO {
+    height: 350px;
+    padding-top: 30px;
+  }
+  .hidden_boxO input {
+    width: 400px;
+    display: none;
+  }
+  /*oth1*/
+  .hidden_boxO .hidden_show8 {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+  }
+  .hidden_boxO #label8:checked ~ .hidden_show8 {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
+  }
+  .othWorks {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .circle8 {
+    position: relative;
+    display: flex;
+    float: left;
+    margin-left: auto;
+    text-align: center;
+    width: 140px;
+    height: 140px;
+    border: solid 5px #ffdc38;
+    border-radius: 50%;
+    animation: move1 7s linear infinite;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .wood {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background: url("../img/wood.png");
+    background-size: cover;
+    background-position: 35% center;
+    transition-duration: 0.3s;
+  }
+  label .wood:hover {
+    transform: scale(1.3);
+    transition: 0.5s;
+  }
+  /*oth2*/
+  .hidden_boxO .hidden_show9 {
+    margin-top: -30px;
+    display: block;
+    text-align: center;
+    widows: 100%;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+  }
+  .hidden_boxO #label9:checked ~ .hidden_show9 {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
+  }
+  .circle9 {
+    position: relative;
+    display: flex;
+    float: left;
+    margin-left: auto;
+    text-align: center;
+    width: 140px;
+    height: 140px;
+    border: solid 5px #ffdc38;
+    border-radius: 50%;
+    animation: move2 7s linear infinite;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .teki {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background: url("../img/teki.png");
+    background-size: cover;
+    background-position: 35% center;
+    transition-duration: 0.3s;
+  }
+  label .teki:hover {
+    transform: scale(1.3);
+    transition: 0.5s;
+  }
+  footer {
+    margin-top: 50px;
+  }
+}
