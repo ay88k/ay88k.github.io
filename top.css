@@ -1,0 +1,638 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: YuGothic, 'Yu Gothic', sans-serif;
+  cursor: none;
+}
+html, body {
+  height: 100%;
+  /*↑100%にすること*/
+  width: auto;
+}
+body {
+  background: #5b5b5b;
+}
+.cursor {
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+  background-color: #ffdc38;
+  z-index: 100;
+  transition: transform .1s;
+  text-align: center;
+  opacity: 0.7;
+}
+.is-active {
+  transform: scale(3);
+}
+ul {
+  list-style: none;
+}
+.navbar {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(91, 91, 91, 0.7);
+  z-index: 2;
+}
+nav ul {
+  width: 750px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.top {
+  padding-bottom: 300px;
+  padding-top: 150px;
+}
+.box {
+  position: relative;
+  max-width: 750px;
+  height: 430px;
+  margin: auto;
+  overflow: hidden;
+}
+.box .bgImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  animation: bgAnime 12s infinite;
+}
+.box .src1 {
+  background-image: url("../img/spa.png");
+  background-position: center;
+  background-size: cover;
+}
+.box .src2 {
+  background-image: url("../img/gra.png");
+  animation-delay: 3s;
+  background-position: center;
+  background-size: cover;
+}
+.box .src3 {
+  background-image: url("../img/pro.png");
+  animation-delay: 6s;
+  background-position: center;
+  background-size: cover;
+}
+.box .src4 {
+  background-image: url("../img/cra.png");
+  animation-delay: 9s;
+  background-position: center;
+  background-size: cover;
+}
+#point {
+  position: fixed;
+  right: 80px;
+  top: 200px;
+}
+#point li {
+  width: 113px;
+  height: 20px;
+  margin-left: 65px;
+  margin-top: 20px;
+  padding-left: 40px;
+  padding-top: 10px;
+  background-repeat: no-repeat;
+  text-align: right;
+}
+.point1 a {
+  display: block;
+}
+.point1 a:hover {
+  background: url("../img/web.png") no-repeat;
+  height: 30px;
+}
+.point2 a {
+  display: block;
+}
+.point2 a:hover {
+  background: url("../img/graphic.png") no-repeat;
+  height: 30px;
+}
+.point3 a {
+  display: block;
+}
+.point3 a:hover {
+  background: url("../img/space.png") no-repeat;
+  height: 30px;
+}
+.point4 a {
+  display: block;
+}
+.point4 a:hover {
+  background: url("../img/other.png") no-repeat;
+  height: 30px;
+}
+.topBtn {
+  position: fixed;
+  text-align: right;
+  top: 640px;
+  right: 30px;
+  z-index: 10;
+}
+.works-wrap {
+  position: relative;
+  width: 750px;
+  margin: 0 auto;
+}
+.imgBox {
+  width: 500px;
+  margin-right: 30px;
+}
+#web-wrapper {
+  padding-top: 100px;
+}
+p {
+  color: #ffdc38;
+  margin-right: 50px;
+}
+.hidden_boxW {
+  height: 350px;
+  padding-top: 30px;
+  position: relative;
+}
+.hidden_boxW input {
+  display: none;
+}
+/*web1*/
+.hidden_show1 {
+  position: absolute;
+}
+.hidden_boxW .hidden_show1 {
+  display: flex;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.8s;
+}
+.hidden_boxW #label1:checked ~ .hidden_show1 {
+  padding: 10px 0;
+  height: auto;
+  opacity: 1;
+}
+.circle1 {
+  position: relative;
+  display: flex;
+  float: left;
+  margin-left: 50px;
+  text-align: center;
+  width: 180px;
+  height: 180px;
+  border: solid 5px #ffdc38;
+  border-radius: 50%;
+  animation: move1 7s linear infinite;
+  overflow: hidden;
+  cursor: pointer;
+}
+.ochuchi {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: url("../img/ochuchi.png");
+  background-size: cover;
+  background-position: 35% center;
+  transition-duration: 0.3s;
+}
+label .ochuchi:hover {
+  transform: scale(1.3);
+  transition: 0.5s;
+}
+/*web2*/
+.hidden_show2 {
+  position: absolute;
+}
+.hidden_boxW .hidden_show2 {
+  display: flex;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.8s;
+}
+.hidden_boxW #label2:checked ~ .hidden_show2 {
+  padding: 10px 0;
+  height: auto;
+  opacity: 1;
+}
+.circle2 {
+  position: relative;
+  display: flex;
+  float: left;
+  margin-left: 50px;
+  text-align: center;
+  width: 180px;
+  height: 180px;
+  border: solid 5px #ffdc38;
+  border-radius: 50%;
+  animation: move2 7s linear infinite;
+  overflow: hidden;
+  cursor: pointer;
+}
+.shiro {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: url("../img/shiro.png");
+  background-size: cover;
+  background-position: 35% center;
+  transition-duration: 0.3s;
+}
+label .shiro:hover {
+  transform: scale(1.3);
+  transition: 0.5s;
+}
+/*web3*/
+.hidden_show3 {
+  position: absolute;
+}
+.hidden_boxW .hidden_show3 {
+  display: flex;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.8s;
+}
+.hidden_boxW #label3:checked ~ .hidden_show3 {
+  padding: 10px 0;
+  height: auto;
+  opacity: 1;
+}
+.circle3 {
+  position: relative;
+  display: flex;
+  float: left;
+  margin-left: 50px;
+  text-align: center;
+  width: 180px;
+  height: 180px;
+  border: solid 5px #ffdc38;
+  border-radius: 50%;
+  animation: move3 7s linear infinite;
+  overflow: hidden;
+  cursor: pointer;
+}
+.port {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: url("../img/softop.png");
+  background-size: cover;
+  background-position: 35% center;
+  transition-duration: 0.3s;
+}
+label .port:hover {
+  transform: scale(1.3);
+  transition: 0.5s;
+}
+#gra-wrapper {
+  padding-top: 100px;
+  margin-top: 200px;
+}
+.hidden_boxG {
+  position: relative;
+  height: 350px;
+  padding-top: 30px;
+}
+.hidden_boxG input {
+  display: none;
+}
+/*gra1*/
+.hidden_show4 {
+  position: absolute;
+}
+.hidden_boxG .hidden_show4 {
+  display: flex;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.8s;
+}
+.hidden_boxG #label4:checked ~ .hidden_show4 {
+  padding: 10px 0;
+  height: auto;
+  opacity: 1;
+}
+.circle4 {
+  position: relative;
+  display: flex;
+  float: left;
+  margin-left: 50px;
+  text-align: center;
+  width: 180px;
+  height: 180px;
+  border: solid 5px #ffdc38;
+  border-radius: 50%;
+  animation: move1 7s linear infinite;
+  overflow: hidden;
+  cursor: pointer;
+}
+.mud {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: url("../img/mud.png");
+  background-size: cover;
+  background-position: 35% center;
+  transition-duration: 0.3s;
+}
+label .mud:hover {
+  transform: scale(1.3);
+  transition: 0.5s;
+}
+/*gra2*/
+.hidden_show5 {
+  position: absolute;
+}
+.hidden_boxG .hidden_show5 {
+  display: flex;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.8s;
+}
+.hidden_boxG #label5:checked ~ .hidden_show5 {
+  padding: 10px 0;
+  height: auto;
+  opacity: 1;
+}
+.circle5 {
+  position: relative;
+  display: flex;
+  float: left;
+  margin-left: 50px;
+  text-align: center;
+  width: 180px;
+  height: 180px;
+  border: solid 5px #ffdc38;
+  border-radius: 50%;
+  animation: move2 7s linear infinite;
+  overflow: hidden;
+  cursor: pointer;
+}
+.typo {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: url("../img/typo.png");
+  background-size: cover;
+  background-position: 35% center;
+  transition-duration: 0.3s;
+}
+label .typo:hover {
+  transform: scale(1.3);
+  transition: 0.5s;
+}
+#spa-wrapper {
+  padding-top: 100px;
+  margin-top: 200px;
+}
+.hidden_boxS {
+  position: relative;
+  height: 350px;
+  padding-top: 30px;
+}
+.hidden_boxS input {
+  display: none;
+}
+/*spa1*/
+.hidden_show6 {
+  position: absolute;
+}
+.hidden_boxS .hidden_show6 {
+  display: flex;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.8s;
+}
+.hidden_boxS #label6:checked ~ .hidden_show6 {
+  padding: 10px 0;
+  height: auto;
+  opacity: 1;
+}
+.circle6 {
+  position: relative;
+  display: flex;
+  float: left;
+  margin-left: 50px;
+  text-align: center;
+  width: 180px;
+  height: 180px;
+  border: solid 5px #ffdc38;
+  border-radius: 50%;
+  animation: move2 7s linear infinite;
+  overflow: hidden;
+  cursor: pointer;
+}
+.egg {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: url("../img/egg.png");
+  background-size: cover;
+  background-position: 35% center;
+  transition-duration: 0.3s;
+}
+label .egg:hover {
+  transform: scale(1.3);
+  transition: 0.5s;
+}
+/*spa2*/
+.hidden_show7 {
+  position: absolute;
+}
+.hidden_boxS .hidden_show7 {
+  display: flex;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.8s;
+  margin-top: -30px;
+}
+.hidden_boxS #label7:checked ~ .hidden_show7 {
+  padding: 10px 0;
+  height: auto;
+  opacity: 1;
+}
+.circle7 {
+  position: relative;
+  display: flex;
+  float: left;
+  margin-left: 50px;
+  text-align: center;
+  width: 180px;
+  height: 180px;
+  border: solid 5px #ffdc38;
+  border-radius: 50%;
+  animation: move3 7s linear infinite;
+  overflow: hidden;
+  cursor: pointer;
+}
+.candy {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: url("../img/candy.png");
+  background-size: cover;
+  background-position: 35% center;
+  transition-duration: 0.3s;
+}
+label .candy:hover {
+  transform: scale(1.3);
+  transition: 0.5s;
+}
+#oth-wrapper {
+  padding-top: 100px;
+  margin-top: 200px;
+}
+.hidden_boxO {
+  position: relative;
+  height: 350px;
+  padding-top: 30px;
+}
+.hidden_boxO input {
+  display: none;
+}
+/*oth1*/
+.hidden_show8 {
+  position: absolute;
+}
+.hidden_boxO .hidden_show8 {
+  display: flex;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.8s;
+}
+.hidden_boxO #label8:checked ~ .hidden_show8 {
+  padding: 10px 0;
+  height: auto;
+  opacity: 1;
+}
+.circle8 {
+  position: relative;
+  display: flex;
+  float: left;
+  margin-left: 50px;
+  text-align: center;
+  width: 180px;
+  height: 180px;
+  border: solid 5px #ffdc38;
+  border-radius: 50%;
+  animation: move1 7s linear infinite;
+  overflow: hidden;
+  cursor: pointer;
+}
+.wood {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: url("../img/wood.png");
+  background-size: cover;
+  background-position: 35% center;
+  transition-duration: 0.3s;
+}
+label .wood:hover {
+  transform: scale(1.3);
+  transition: 0.5s;
+}
+/*oth2*/
+.hidden_show9 {
+  position: absolute;
+}
+.hidden_boxO .hidden_show9 {
+  display: flex;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.8s;
+}
+.hidden_boxO #label9:checked ~ .hidden_show9 {
+  padding: 10px 0;
+  height: auto;
+  opacity: 1;
+}
+.circle9 {
+  position: relative;
+  display: flex;
+  float: left;
+  margin-left: 50px;
+  text-align: center;
+  width: 180px;
+  height: 180px;
+  border: solid 5px #ffdc38;
+  border-radius: 50%;
+  animation: move2 7s linear infinite;
+  overflow: hidden;
+  cursor: pointer;
+}
+.teki {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: url("../img/teki.png");
+  background-size: cover;
+  background-position: 35% center;
+  transition-duration: 0.3s;
+}
+label .teki:hover {
+  transform: scale(1.3);
+  transition: 0.5s;
+}
+footer {
+  margin-top: 300px;
+  text-align: center;
+  background: #ffdc38;
+  color: #5B5B5B;
+}
+/*animation*/
+@keyframes bgAnime {
+  0% {
+    opacity: 0;
+  }
+  3% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  28% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes move1 {
+  50% {
+    border-radius: 70% 58% 62% 42% / 64% 70% 64% 50%;
+  }
+  75% {
+    border-radius: 69% 67% 63% 52% / 48% 83% 46% 62%;
+  }
+}
+@keyframes move2 {
+  50% {
+    border-radius: 85% 47% 63% 50% / 73% 66% 57% 48%;
+  }
+  75% {
+    border-radius: 79% 66% 63% 63% / 73% 66% 76% 61%;
+  }
+}
+@keyframes move3 {
+  50% {
+    border-radius: 44% 84% 56% 50% / 60% 66% 63% 63%;
+  }
+  75% {
+    border-radius: 57% 52% 56% 63% / 60% 52% 63% 63%;
+  }
+}
