@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ymym-portfolio</title>
+<link href="css/top.css" rel="stylesheet" type="text/css">
+<link href="css/top_responsive.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.1/TweenMax.min.js"></script> 
+<script type="text/javascript" src="js/port.js"></script>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+</head>
+
+<body>
+<div class="cursor"></div>
+	
+<div id="wrap">
+  <header>
+    <div class="navbar">
+      <nav>
+        <ul>
+          <li><a href="profile.html"><img src="img/profile.png" alt="profile" width="76"></a></li>
+          <li><img src="img/works×.png" alt="works" width="77"></li>
+          <li><a href="contact.html"><img src="img/contact.png" alt="contact" width="80"></a></li>
+        </ul>
+      </nav>
+    </div><!--//navbar--> 
+  </header>
+	
+  <main>
+    <div class="top">
+      <div class="box">
+        <div class="bgImg src1"></div>
+        <div class="bgImg src2"></div>
+        <div class="bgImg src3"></div>
+        <div class="bgImg src4"></div>
+      </div><!--//box-->
+      <div id="point">
+        <ul>
+          <li class="point1"><a href="#web-wrapper"><img src="img/point_off.png" alt=""></a></li>
+          <li class="point2"><a href="#gra-wrapper"><img src="img/point_off.png" alt=""></a></li>
+          <li class="point3"><a href="#spa-wrapper"><img src="img/point_off.png" alt=""></a></li>
+          <li class="point4"><a href="#oth-wrapper"><img src="img/point_off.png" alt=""></a></li>
+        </ul>
+      </div><!--//point--> 
+    </div><!--//top--> 
+    
+    <a href="#wrap"><img src="img/softop.png" class="topBtn" alt="topへ"></a>
+	  
+    <div class="works-wrap">
+      <div id="web-wrapper">
+        <h2><img src="img/web design.png" alt="web design"></h2>
+        <div class="hidden_boxW">
+          <input type="radio" name="radio" id="label1" onClick="check_reset(this,1)"/>
+          <div class="hidden_show1">
+            <div class="imgBox"><video src="img/ochuchi.mp4" width="500" loop autoplay muted></video></div>
+            <p class="text">架空のお寿司屋さんのウェブサイトを3人チームで制作した。<br>
+              自分は主にロゴデザイン・メニューのコーディングを担当。</p>
+          </div><!--//hidden_show1-->
+          <input type="radio" name="radio" id="label2" onClick="check_reset(this,2)"/>
+          <div class="hidden_show2">
+            <div class="imgBox"><video src="img/shiro.mp4" width="500" loop autoplay muted></video></div>
+            <p class="text">愛犬と夏を楽しめる海の家「シロと砂浜」をプランニング。<br>
+              宣伝するためのツールとしてウェブサイトを制作した。</p>
+          </div><!--//hidden_show2-->
+          <input type="radio" name="radio" id="label3" onClick="check_reset(this,3)"/>
+          <div class="hidden_show3">
+            <div class="imgBox"><video src="img/port.mp4" width="500" loop autoplay muted></video></div>
+            <p class="text">ポートフォリオサイト。犬と黄色とソフトクリームが好き。<br>
+              制作したモノ・コトをシンプルに伝わるようにした。</p>
+          </div><!--//hidden_show3--> 
+        </div><!--//hidden_boxW-->
+        <div class="webWorks">
+          <label for="label1">
+          <a>
+          <div class="circle1">
+            <div class="ochuchi"></div>
+          </div>
+          </a>
+          </label>
+          <label for="label2">
+          <a>
+          <div class="circle2">
+            <div class="shiro"></div>
+          </div>
+          </a>
+          </label>
+          <label for="label3">
+          <a>
+          <div class="circle3">
+            <div class="port"></div>
+          </div>
+          </a>
+          </label>
+        </div><!--//webWorks--> 
+      </div><!--//web-wrapper-->
+      <div id="gra-wrapper">
+        <h2><img src="img/graphic design.png" alt="graphic design"></h2>
+        <div class="hidden_boxG">
+          <input type="radio" name="radio" id="label4" onClick="check_reset(this,4)"/>
+          <div class="hidden_show4">
+            <div class="imgBox"><img src="img/mudH.png" alt="うちの子避難マニュアル"></div>
+            <p class="text">ずっと一緒にいるための、ペットとの災害時避難マニュアル。<br>
+              災害が多い今日、愛犬との避難について調べてまとめた。<br>
+			  メディア・ユニバーサルデザイン・コンペティションで優秀賞を受賞。</p>
+          </div><!--//hidden_show4-->
+          <input type="radio" name="radio" id="label5" onClick="check_reset(this,5)"/>
+          <div class="hidden_show5">
+            <div class="imgBox"><img src="img/typoH.png" alt="Front"></div>
+            <p class="text">『Front』というフォントの作成。<br>
+              フロントガラスから見える道路をアルファベットに見立てた。</p>
+          </div><!--//hidden_show5--> 
+        </div><!--//hidden_boxG-->
+        <div class="graWorks">
+          <label for="label4">
+          <a>
+          <div class="circle4">
+            <div class="mud"></div>
+          </div>
+          </a>
+          </label>
+          <label for="label5">
+          <a>
+          <div class="circle5">
+            <div class="typo"></div>
+          </div>
+          </a>
+          </label>
+        </div><!--//graWorks--> 
+      </div><!--//gra-wrapper-->
+      <div id="spa-wrapper">
+        <h2><img src="img/space design.png" alt=""></h2>
+        <div class="hidden_boxS">
+          <input type="radio" name="radio" id="label6" onClick="check_reset(this,6)"/>
+          <div class="hidden_show6">
+            <div class="imgBox"><img src="img/eggH.png" alt="たまごアパート Hatching"></div>
+            <p class="text">駆け出しの人(〇〇のたまご)が活躍するアパート型ショッピングモールをプランニングした。<br>
+			　古アパートのリノベーションを題材とした。</p>
+          </div><!--//hidden_show6-->
+          <input type="radio" name="radio" id="label7" onClick="check_reset(this,7)"/>
+          <div class="hidden_show7">
+            <div class="imgBox"><img src="img/candyH.png" alt="Candy shop"></div>
+            <p class="text">高校時代に描いたパースを3dsMAXでおこしたもの。<br>
+              外国の小さなお菓子屋さんをイメージした。</p>
+          </div><!--//hidden_show7--> 
+        </div><!--//hidden_boxS-->
+        <div class="spaWorks">
+          <label for="label6">
+          <a>
+          <div class="circle6">
+            <div class="egg"></div>
+          </div>
+          </a>
+          </label>
+          <label for="label7">
+          <a>
+          <div class="circle7">
+            <div class="candy"></div>
+          </div>
+          </a>
+          </label>
+        </div><!--//spaWorks--> 
+      </div><!--//spa-wrapper-->
+      <div id="oth-wrapper">
+        <h2><img src="img/other design.png" alt="other design"></h2>
+        <div class="hidden_boxO">
+          <input type="radio" name="radio" id="label8" onClick="check_reset(this,8)"/>
+          <div class="hidden_show8">
+            <div class="imgBox"><img src="img/woodH.png" alt="木の温もりキッチンワゴン"></div>
+            <p class="text">アカマツ集成材で作ったぬくもりあるキッチンワゴン。<br>
+              設計〜組み立て、仕上げまで行った。</p>
+          </div><!--//hidden_show8-->
+          <input type="radio" name="radio" id="label9" onClick="check_reset(this,9)"/>
+          <div class="hidden_show9">
+            <div class="imgBox"><img src="img/tekiH.png" alt="テキスタイル"></div>
+            <p class="text">授業で作ったテキスタイル。<br>
+              手前から、アイス・連れ去り・風に吹かれるの3柄。</p>
+          </div><!--//hidden_show9--> 
+        </div><!--//hidden_boxO-->
+        <div class="othWorks">
+          <label for="label8">
+          <a>
+          <div class="circle8">
+            <div class="wood"></div>
+          </div>
+          </a>
+          </label>
+          <label for="label9">
+          <a>
+          <div class="circle9">
+            <div class="teki"></div>
+          </div>
+          </a>
+          </label>
+        </div><!--//othWorks--> 
+      </div><!--//oth-wrapper--> 
+    </div><!--//works-wrap--> 
+  </main>
+</div><!--//wrap-->
+<footer>(c) 2019 ymym-portfolio</footer>
+<script type="text/javascript" src="js/cursor.js"></script>
+</body>
+</html>
